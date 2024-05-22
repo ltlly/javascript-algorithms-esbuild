@@ -1,4 +1,14 @@
 module.exports = {
+  transform: {
+    "^.+\\.js?$": [
+      "esbuild-jest",
+      {
+        loader: "js",
+        format: "cjs",
+      },
+    ],
+  },
+
   // The bail config option can be used here to have Jest stop running tests after
   // the first failure.
   bail: false,
@@ -38,3 +48,4 @@ module.exports = {
     },
   },
 };
+
